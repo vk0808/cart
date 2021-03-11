@@ -20,7 +20,7 @@ const CartContainer = () => {
       </header>
       <div>
         {cart.map((item) => {
-          return <CartItem key={item.id} {...item} />;
+          return <CartItem key={item.id} {...item} />
         })}
       </div>
       <footer>
