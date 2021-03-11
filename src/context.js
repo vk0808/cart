@@ -17,9 +17,13 @@ export const AppProvider = ({ children }) => {
 
   const clearCart = () => {
     dispatch({type:'CLEAR_CART'})
-  } 
+  }
 
-  return <AppContext.Provider value={{ ...state, clearCart }}>{children}</AppContext.Provider>;
+  const remove = (id) => {
+    dispatch({type:'REMOVE', payload:id})
+  }
+
+  return <AppContext.Provider value={{ ...state, clearCart, remove }}>{children}</AppContext.Provider>;
 };
 
 export const useGlobalContext = () => {
