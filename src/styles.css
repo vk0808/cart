@@ -243,7 +243,7 @@ Cart Item
 }
 .amount-btn {
   width: 1.5rem;
-  background: transparent;
+  background: var(--clr-primary-light);
   border: none;
   cursor: pointer;
 }
@@ -251,7 +251,7 @@ Cart Item
   fill: var(--clr-primary);
 }
 .amount-btn:hover svg {
-  fill: var(--clr-primary-light);
+  fill: var(--clr-primary-dark);
 }
 .amount {
   text-align: center;
