@@ -30,13 +30,13 @@ const CartContainer = () => {
             total <span>$0.00</span>
           </h4>
         </div>
+        <button
+          className="btn clear-btn"
+          onClick={() => console.log("cart-clear")}
+        >
+          clear cart
+        </button>
       </footer>
-      <button
-        className="btn clear-btn"
-        onClick={() => console.log("cart-clear")}
-      >
-        clear cart
-      </button>
     </section>
   );
 };
