@@ -11,6 +11,6 @@ export const AppProvider = ({ children }) => {
   return <AppContext.Provider value={{ cart }}>{children}</AppContext.Provider>;
 };
 
-export const useGlobalCOntext = () => {
+export const useGlobalContext = () => {
   return useContext(AppContext);
 };
