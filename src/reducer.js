@@ -9,6 +9,7 @@ const reducer = (state, action) => {
       cart: state.cart.filter((cartItem) => cartItem.id !== action.payload)
     };
   }
+
   if (action.type === "INCREASE") {
     let tempCart = state.cart.map((cartItem) => {
       if (cartItem.id === action.payload) {
@@ -24,6 +25,7 @@ const reducer = (state, action) => {
       cart: tempCart
     };
   }
+
   if (action.type === "DECREASE") {
     let tempCart = state.cart
       .map((cartItem) => {
@@ -40,6 +42,18 @@ const reducer = (state, action) => {
       ...state,
       cart: tempCart
     };
+  }
+
+  if (action.type === 'GET_TOTALS') {
+    const {total, amount} = state.cart.reduce((cartTotal, cartItem) => {
+      const {price, amount} = cartItem;
+      cartTotal.amount += amount;
+      return cartTotal
+    }, {
+      total: 0,
+      amount: 0
+    })
+    return {...state, total, amount}
   }
 
   return state;
