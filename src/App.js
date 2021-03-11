@@ -1,10 +1,13 @@
 import "./styles.css";
+import { useGlobalContext } from "./context";
+import Navbar from "./Navbar";
+import CartContainer from "./CartContainer";
 
 export default function App() {
   return (
-    <div className="App">
-      <h1>Hello CodeSandbox</h1>
-      <h2>Start editing to see some magic happen!</h2>
-    </div>
+    <main>
+      <Navbar />
+      <CartContainer />
+    </main>
   );
 }
