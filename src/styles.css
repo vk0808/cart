@@ -114,6 +114,12 @@ p {
 Navbar
 ===============
 */
+.loading {
+  display: flex;
+  height: 90vh;
+  align-items: center;
+  justify-content: center;
+}
 nav {
   background: var(--clr-primary);
   padding: 1.25rem 2rem;

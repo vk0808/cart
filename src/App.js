@@ -2,6 +2,7 @@ import "./styles.css";
 import { useGlobalContext } from "./context";
 import Navbar from "./Navbar";
 import CartContainer from "./CartContainer";
+import ReactLoading from 'react-loading';
 
 export default function App() {
   const { loading } = useGlobalContext();
@@ -9,7 +10,7 @@ export default function App() {
   if (loading) {
     return (
       <div className="loading">
-        <h1>Loading...</h1>
+        <ReactLoading type={"bars"} color={"grey"} />
       </div>
     )
   }
